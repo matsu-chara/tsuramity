@@ -41,19 +41,7 @@ class Controller_Welcome extends Controller
                   'screen_name' => $twitter_user->screen_name
             );
 
-		return Response::forge(View::forge('welcome/index', $data));
-	}
-
-	/**
-	 * A typical "Hello, Bob!" type example.  This uses a ViewModel to
-	 * show how to use them.
-	 *
-	 * @access  public
-	 * @return  Response
-	 */
-	public function action_hello()
-	{
-		return Response::forge(ViewModel::forge('welcome/hello'));
+		return Response::forge(View::forge('welcome/index.twig', $data));
 	}
 
 	/**
